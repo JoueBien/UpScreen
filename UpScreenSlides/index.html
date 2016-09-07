@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Steel Orchid</title>
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/mSuport.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="googleIcons/iconfont/material-icons.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="googleIcons/iconfont/material-icons.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="font-awesome-4-6-3/css/font-awesome.min.css">
+    </head>
+    <body>
+    <!-- top menu -->
+        <ul id="DropDown_File" class="dropdown-content">
+            <li class="dropdown-item"><a href="#!">Open</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-item"><a href="#!">Save</a></li>
+            <li class="dropdown-item"><a href="#!">Save As</a></li>
+        </ul>
+        <ul id="DropDown_Edit" class="dropdown-content">
+            <li><a href="#!">Slides & Layers</a></li>
+            <li><a href="#!">Background</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Settings</a></li>
+        </ul>
+        <ul id="DropDown_Insert" class="dropdown-content">
+            <li id="addSlideBTN"><a href="#!">Slide</a></li>
+            <li id="addLayerBTN"><a href="#!">layer</a></li>
+        </ul>
+        <nav>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a class="dropdown-button" href="#!" data-activates="DropDown_File"> File <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="DropDown_Edit"> Editor <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="DropDown_Insert"> Insert <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+                <li><a>Settings</a></li>
+            </ul>
+        </div>
+    <!-- side menus -->
+        <ul id="slide-out" class="side-nav">
+
+        </il>
+            <il id="sideMenu_Heading">
+                <div class="row">
+                    <div class="col s11"><a class="subheader center sideHeading" id="sideHeadingTitle">Slides & Layers</a></div>
+                    <div class="col s1"><i class="material-icons button-collapse iconBTN" id="closeBTN" data-activates="slide-out">close</i></div>
+
+                </div>
+            </il>
+            <il>
+                <div class="row">
+                    <div class="col s6 center">
+                        <div class="btn" id="editSlidesBTN">Slides</div>
+                    </div>
+                    <div class="col s6 center">
+                        <div class="btn" id="editLayersBTN">Layers</div>
+                    </div>
+                    <div class="col s12" id="slideList">
+                        <div class="screenIcon"></div>
+                        <div class="center">Slide 1</div>
+                    </div>
+                    <div class="col s12" id="layerList">
+                    </div>
+                </div>
+            </il>
+        </ul>
+     </nav>
+
+     <div id="slidePreviewEditor">
+     </div>
+
+</body>
+
+
+    <script>
+          window.$ = window.jQuery = require('./jquery/jquery-3.1.0.min.js');
+    </script>
+    <script type="text/javascript" src="./hammer/hammer.min.js"></script>
+
+    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+    <script>
+        var defoultNewSlide = {
+            "background" : {
+                "type" : "color",
+                "data" : "black"
+            },
+            "slide" : {
+                "number" : 0,
+                "displayName" : "demoSlide",
+                "displayNumber" : 0,
+                "notes" : "no notes",
+            },
+            "innerSlideParts": [],
+        };
+
+        var defoultNewSLayer = {
+            "text" : {
+                "text" : "",
+                "afterText" : "",
+                "textSize" : 5,
+                "textColour" : "black",
+                "textFont" : "",
+                "textAlign" : "left"
+            },
+            "background" : {
+                "type" : "colour",
+                "data" : "white",
+            },
+            "innerSlideParts" : [],
+            "x" : 0,
+            "y" : 0,
+            "width" : -1,
+            "height" : -1,
+            "opacity" : 0,
+            "padding" : 0,
+            "shape" : "square",
+            "borderRadius" : 0,
+
+            "outline" :{
+                "size" : 0,
+                "colour": "black",
+                "style" : "solid",
+
+            }
+        };
+        var slides = [];
+        var editingSlide = 0;
+        //functions
+        function setEditingSlide (number){
+            editingSlide=number;
+            paintSlideLayers();
+        }
+        function addLayer (){
+            slides[editingSlide].innerSlideParts.push(JSON.parse(JSON.stringify(defoultNewSLayer)));
+            paintSlideLayers();
+        }
+
+        function paintSlideLayers (){
+
+            index = 0;
+            html ="";
+            for (layer of slides[editingSlide].innerSlideParts){
+                html+=`<div class="row">`;
+                html+=`<div class=" col s6 btn">layer: `+index+`</div>`;
+                html+=`<div class=" col s2 btn"><i class="fa fa-pencil" aria-hidden="true"></i></div>`;
+                html+=`<div class=" col s2 btn"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>`;
+                html+=`<div class=" col s2 btn"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>`;
+                html+=`<div class=" col s2 btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>`;
+                html+=`<div class=" col s2 btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>`;
+
+
+                html+=`</div>`;
+
+
+
+                index++;
+            }
+            document.getElementById("layerList").innerHTML = html;
+        }
+
+        function addSlide (){
+            slides.push(JSON.parse(JSON.stringify(defoultNewSlide)));
+            paintSlideIcons();
+        }
+
+        function paintSlideIcons (){
+            index = 0;
+            html ="";
+            for (slide of slides){
+                html += `
+                <div class="row">
+                    <div class="center col s2 btn"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+                    <div class="center col s8"></div>
+                    <div class="center col s2 btn"><i class="fa fa-eraser" aria-hidden="true"></i></div>
+                    <div class=" col s12 noPadding">
+                        <div class="screenIcon" onclick="setEditingSlide(`+index+`)"></div>
+                    </div>
+                    <div class=" col s2 btn"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                    <div class="center col s8">Slide `+index+`</div>
+                    <div class=" col s2 btn"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                </div>
+
+                `;
+                index++;
+            }
+            document.getElementById("slideList").innerHTML = html;
+        }
+        function showLayersMenu(){
+            $("#layerList").show();
+            $("#slideList").hide();
+        }
+        function showSlidesMenu (){
+            $("#slideList").show();
+            $("#layerList").hide();
+        }
+        $( document ).ready(function(){
+            //event handlers
+            $(".button-collapse").sideNav();
+            $('.button-collapse').sideNav('show');
+            $( "#addSlideBTN" ).click(function() {
+                addSlide();
+                showSlidesMenu();
+            });
+            $("#addLayerBTN").click(function() {
+                addLayer();
+                showLayersMenu();
+            });
+            $("#editSlidesBTN").click(function(){
+                paintSlideIcons();
+                showSlidesMenu();
+            });
+            $("#editLayersBTN").click(function(){
+                showLayersMenu();
+            });
+            //main line
+            addSlide();
+            showSlidesMenu();
+
+        });
+    </script>
+</html>

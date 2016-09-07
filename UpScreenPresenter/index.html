@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Steel Orchid</title>
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/mSuport.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="googleIcons/iconfont/material-icons.css"  media="screen,projection"//>
+    </head>
+    <body>
+    <!-- top menu -->
+        <ul id="DropDown-Multe" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <ul id="DropDown_Screens" class="dropdown-content">
+            <li class="divider"></li>
+            <li><a href="#!">Freeze/Mute</a></li>
+            <li><a href="#!">Switch</a></li>
+            <li><a href="#!">Logo</a></li>
+        </ul>
+        <nav>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a>File</a></li>
+                <li><a>Edit</a></li>
+                <li><a>Trigger Sets</a></li>
+                <li><a>Backgrounds</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="DropDown_Screens">Screen<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a>Settings</a></li>
+            </ul>
+        </div>
+    <!-- side menus -->
+        <ul id="slide-out" class="side-nav">
+
+        </il>
+            <il id="sideMenu_Heading">
+                <div class="row">
+                    <div class="col s11"><a class="subheader center sideHeading">Settings</a></div>
+                    <div class="col s1"><i class="material-icons button-collapse iconBTN" id="closeBTN" data-activates="slide-out">close</i></div>
+                </div>
+            </il>
+            <il id="sideMenu_Settings">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="col s6 inputLableCustom">Screen Width</div>
+                            <div class="col s6 inputLableCustom">Screen Height</div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                <input placeholder="Screen Width" id="screenWidthSetting" type="number" value="1920" min="1" max="10000" step="1">
+                            </div>
+                            <div class="col s6">
+                                <input placeholder="Screen Width" id="ScreenHightSetting" type="number" value="1080" min="1" max="10000" step="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="inputLableCustom">Number of Output Screens</div>
+                        <select class="browser-default">
+                            <option value="" disabled selected>Choose number of output screens.</option>
+                            <option value="1">1 Screen</option>
+                            <option value="2">2 Screens</option>
+                            <option value="3">3 Screens</option>
+                            <option value="3">4 Screens</option>
+                            <option value="3">5 Screens</option>
+                            <option value="3">6 Screens</option>
+                            <option value="3">7 Screens</option>
+                            <option value="3">8 Screens</option>
+                            <option value="3">9 Screens</option>
+                        </select>
+                    </div>
+                </div>
+            </il>
+            <il id="sideMenu_TriggerSets">
+
+                <div class="row">
+                    <div class=" col s10">
+                        <input type="text" placeholder="search">
+                    </div>
+                    <div class="col s1">
+                        <i class="material-icons iconBTN">search</i>
+                    </div>
+                </div>
+
+            </il>
+            <il class="sideMenu_Backgrounds"></il>
+            <il id="sideMenu_Screens_FreezeMute">
+                <div class="row">
+                    <div class=" col s6">
+                        <div class="switch" id="freezekOut_1_Swt"><label>
+                            Off
+                            <input type="checkbox"><span class="lever"></span>
+                            Freeze 1
+                        </label></div>
+                    </div>
+                    <div class=" col s6">
+                        <div class="switch" id="blackOutSwt_1_Swt"><label>
+                            Off
+                            <input type="checkbox"><span class="lever"></span>
+                            Black 1
+                        </label></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col s6">
+                        <div class="switch" id="freezekOut_2_Swt"><label>
+                            Off
+                            <input type="checkbox"><span class="lever"></span>
+                            Freeze 2
+                        </label></div>
+                    </div>
+                    <div class=" col s6">
+                        <div class="switch" id="blackOutSwt_2_Swt"><label>
+                            Off
+                            <input type="checkbox"><span class="lever"></span>
+                            Black 2
+                        </label></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col s6">
+                        <div class="switch" id="freezekOut_3_Swt"><label>
+                            Off
+                            <input type="checkbox"><span class="lever"></span>
+                            Freeze 3
+                        </label></div>
+                    </div>
+                    <div class=" col s6">
+                        <div class="switch" id="blackOutSwt_3_Swt"><label>
+                            Off
+                            <input type="checkbox"><span class="lever"></span>
+                            Black 3
+                        </label></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col s12 center">
+                        <div class="btn">Update</div>
+                    </div>
+                </div>
+
+
+            </il>
+
+
+
+        </ul>
+
+
+
+  </nav>
+
+    </body>
+
+
+    <script>
+          window.$ = window.jQuery = require('./jquery/jquery-3.1.0.min.js');
+    </script>
+    <script type="text/javascript" src="./hammer/hammer.min.js"></script>
+
+    <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+    <script>
+
+        $( document ).ready(function(){
+            $(".button-collapse").sideNav();
+            $('.button-collapse').sideNav('show');
+        });
+        const remote = require('electron')
+        const ipcRenderer = require('electron').ipcRenderer;
+        ipcRenderer.on("screen1", (event, arg) => {
+            console.log(arg);  // prints "ping"
+        });
+        ipcRenderer.send("screen1",{"slide":{}});
+    </script>
+</html>
