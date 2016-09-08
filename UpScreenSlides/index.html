@@ -15,7 +15,7 @@
             <li class="dropdown-item"><a href="#!">Open</a></li>
             <li class="divider"></li>
             <li class="dropdown-item"><a href="#!">Save</a></li>
-            <li class="dropdown-item"><a href="#!">Save As</a></li>
+            <li id="saveAsBTN" class="dropdown-item"><a href="#!">Save As</a></li>
         </ul>
         <ul id="DropDown_Edit" class="dropdown-content">
             <li><a href="#!">Slides & Layers</a></li>
@@ -78,64 +78,34 @@
     <script type="text/javascript" src="./hammer/hammer.min.js"></script>
 
     <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/suportFunctions.js"></script>
+
     <script>
-        var defoultNewSlide = {
-            "background" : {
-                "type" : "color",
-                "data" : "black"
-            },
-            "slide" : {
-                "number" : 0,
-                "displayName" : "demoSlide",
-                "displayNumber" : 0,
-                "notes" : "no notes",
-            },
-            "innerSlideParts": [],
-        };
 
-        var defoultNewSLayer = {
-            "text" : {
-                "text" : "",
-                "afterText" : "",
-                "textSize" : 5,
-                "textColour" : "black",
-                "textFont" : "",
-                "textAlign" : "left"
-            },
-            "background" : {
-                "type" : "colour",
-                "data" : "white",
-            },
-            "innerSlideParts" : [],
-            "x" : 0,
-            "y" : 0,
-            "width" : -1,
-            "height" : -1,
-            "opacity" : 0,
-            "padding" : 0,
-            "shape" : "square",
-            "borderRadius" : 0,
-
-            "outline" :{
-                "size" : 0,
-                "colour": "black",
-                "style" : "solid",
-
-            }
-        };
         var slides = [];
         var editingSlide = 0;
         //functions
         function setEditingSlide (number){
             editingSlide=number;
-            paintSlideLayers();
+            paintSlideLayersBTNs();
+            paintLayers();
         }
         function addLayer (){
             slides[editingSlide].innerSlideParts.push(JSON.parse(JSON.stringify(defoultNewSLayer)));
-            paintSlideLayers();
+            paintSlideLayersBTNs();
+            paintLayers();
         }
 
-        function paintSlideLayers (){
+        function paintLayers (){
+            html = "";
+            index = 0;
+            for (layer of slides[editingSlide].innerSlideParts){
+                html+=`<div class="layer" `+generateCSS(layer,"absolute")+`></div>`;
+            }
+            document.getElementById("slidePreviewEditor").innerHTML = html;
+        }
+
+        function paintSlideLayersBTNs (){
 
             index = 0;
             html ="";
@@ -185,6 +155,10 @@
             }
             document.getElementById("slideList").innerHTML = html;
         }
+
+
+
+
         function showLayersMenu(){
             $("#layerList").show();
             $("#slideList").hide();
@@ -212,6 +186,12 @@
             $("#editLayersBTN").click(function(){
                 showLayersMenu();
             });
+            $("#saveAsBTN").click(function(){
+                saveAs();
+            });
+
+
+
             //main line
             addSlide();
             showSlidesMenu();

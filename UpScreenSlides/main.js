@@ -1,5 +1,7 @@
 //includes
 const electron = require('electron');
+const  dialog = electron.dialog;
+const fs = require('fs');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const {ipcMain} = require('electron')
@@ -41,7 +43,19 @@ app.on('activate', function () {
 
 
 //the rest of the app
-ipcMain.on('screen1', (event, arg) => {
+ipcMain.on('fileSystem', (event, arg) => {
   console.log(arg) ; // prints "ping"
-  event.sender.send('screen1', arg);
+  event.sender.send('fileSystem', arg);
+  if (arg.type="saveAs"){
+      dialog.showSaveDialog(function (fileName) {
+       if (fileName === undefined){
+            console.log("You didn't save the file");
+            return;
+       }
+       fs.writeFile(fileName, JSON.stringify(arg.data), function (err) {
+           if(err){ alert("An error ocurred creating the file "+ err.message); }
+           console.log("The file has been succesfully saved");
+       });
+   });
+  }
 })
