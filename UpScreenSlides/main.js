@@ -52,7 +52,7 @@ ipcMain.on('fileSystem', (event, arg) => {
             console.log("You didn't save the file");
             return;
        }
-       fs.writeFile(fileName, JSON.stringify(arg.data), function (err) {
+       fs.writeFile(fileName+".slides", JSON.stringify(arg.data), function (err) {
            if(err){ alert("An error ocurred creating the file "+ err.message); }
            console.log("The file has been succesfully saved");
        });

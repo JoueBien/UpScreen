@@ -16,6 +16,12 @@
             <li class="divider"></li>
             <li class="dropdown-item"><a href="#!">Save</a></li>
             <li id="saveAsBTN" class="dropdown-item"><a href="#!">Save As</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-item"><a href="#!">Export</a></li>
+            <li class="dropdown-item"><a href="#!">Export to Presenter</a></li>
+
+
+
         </ul>
         <ul id="DropDown_Edit" class="dropdown-content">
             <li><a href="#!">Slides & Layers</a></li>
@@ -31,7 +37,7 @@
         <div class="nav-wrapper">
             <ul>
                 <li><a class="dropdown-button" href="#!" data-activates="DropDown_File"> File <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
-                <li><a class="dropdown-button" href="#!" data-activates="DropDown_Edit"> Editor <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="DropDown_Edit"> Edit <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="DropDown_Insert"> Insert <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                 <li><a>Settings</a></li>
             </ul>
@@ -84,6 +90,7 @@
 
         var slides = [];
         var editingSlide = 0;
+        var projectName = "";
         //functions
         function setEditingSlide (number){
             editingSlide=number;

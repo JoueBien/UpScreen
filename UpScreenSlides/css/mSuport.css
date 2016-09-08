@@ -84,6 +84,12 @@ nav ul li:hover {
 .side-nav{
     width: 350px;
 }
+/*makes drop down menus display corectly*/
+.dropdown-content{
+    width: 10em !important;
+    width: 10em !important;
+    top: 64px !important;
+}
 
 /*dropdown menu color */
 .dropdown-content li>a, .dropdown-content li>span {
