@@ -24,22 +24,30 @@
 
         </ul>
         <ul id="DropDown_Edit" class="dropdown-content">
-            <li><a href="#!">Slides & Layers</a></li>
-            <li><a href="#!">Background</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">Settings</a></li>
+            <li id="slidesAndLayersBTN"><a href="#!">Slides & Layers</a></li>
+            <li id="BackgroundBTN"><a href="#!">Background</a></li>
         </ul>
         <ul id="DropDown_Insert" class="dropdown-content">
-            <li id="addSlideBTN"><a href="#!">Slide</a></li>
-            <li id="addLayerBTN"><a href="#!">layer</a></li>
+            <li id="addSlideBTN"><a href="#!">Slide</a>
+                    <div class="dropDownSubMenu">Blank</div>
+                    <div class="dropDownSubMenu">Standard</div>
+                    <div class="dropDownSubMenu">2 Collumn</div>
+            </li>
+            <li class="divider"></li>
+            <li ><a href="#!">layer</a>
+                <div class="dropDownSubMenu" id="addLayerBTN">Empty</div>
+                <div class="dropDownSubMenu" id="addLayerTitleBTN">Title</div>
+                <div class="dropDownSubMenu" id="addLayerTextBoxBTN">Text Box</div>
+            </li>
         </ul>
+
         <nav>
         <div class="nav-wrapper">
             <ul>
                 <li><a class="dropdown-button" href="#!" data-activates="DropDown_File"> File <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="DropDown_Edit"> Edit <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="DropDown_Insert"> Insert <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
-                <li><a>Settings</a></li>
+                <li id="settingsBTN"><a>Settings</a></li>
             </ul>
         </div>
     <!-- side menus -->
@@ -48,12 +56,12 @@
         </il>
             <il id="sideMenu_Heading">
                 <div class="row">
-                    <div class="col s11"><a class="subheader center sideHeading" id="sideHeadingTitle">Slides & Layers</a></div>
+                    <div class="col s11"><a class="subheader center sideHeading" id="sideMenuTitle">Slides & Layers</a></div>
                     <div class="col s1"><i class="material-icons button-collapse iconBTN" id="closeBTN" data-activates="slide-out">close</i></div>
 
                 </div>
             </il>
-            <il>
+            <il id="slidesAndLayersMenu">
                 <div class="row">
                     <div class="col s6 center">
                         <div class="btn" id="editSlidesBTN">Slides</div>
@@ -68,6 +76,42 @@
                     <div class="col s12" id="layerList">
                     </div>
                 </div>
+            </il>
+
+            <il id="backgroundsMenu">
+                <div class="row">
+                    <div class="col s12">
+                        <label>Background Type</label>
+                        <select class="browser-default">
+                            <option value="1">Colour</option>
+                            <option value="2">Image</option>
+                            <option value="3">Video</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <label>Background Colour</label>
+                        <input type="color" id="backgroundColour" class="">
+                    </div>
+                </div>
+
+            </il>
+            <il id="SettingsMenu">
+                <div class="row">
+                    <div class="col s12">
+                        <label>Aspect Ratio</label>
+                        <select class="browser-default">
+                            <option value="1">16/9 (HD & UHD/4K)</option>
+                            <option value="2">19/10 (HD & UHD/4K)</option>
+                            <option value="2">21/9 (HD & UHD/4K)</option>
+                            <option value="2">21/10 (HD & UHD/4K)</option>
+                            <option value="3">4/3 (SD & HD)</option>
+                            <option value="3">5/3 (SD & HD)</option>
+                        </select>
+                    </div>
+                </div>
+
             </il>
         </ul>
      </nav>
@@ -103,11 +147,27 @@
             paintLayers();
         }
 
+        function addLayerTitle () {
+            slides[editingSlide].innerSlideParts.push(JSON.parse(JSON.stringify(defoultLayerTitle)));
+            paintSlideLayersBTNs();
+            paintLayers();
+        }
+
+        function addLayersTextBox (){
+            slides[editingSlide].innerSlideParts.push(JSON.parse(JSON.stringify(defoultLayerTextBox)));
+            paintSlideLayersBTNs();
+            paintLayers();
+
+        }
+
         function paintLayers (){
             html = "";
             index = 0;
             for (layer of slides[editingSlide].innerSlideParts){
-                html+=`<div class="layer" `+generateCSS(layer,"absolute")+`></div>`;
+                html+=`<div class="layer" `+generateCSS(layer,"absolute")+`>`+
+                    layer.text.text +
+                    layer.text.afterText +
+                    `</div>`;
             }
             document.getElementById("slidePreviewEditor").innerHTML = html;
         }
@@ -182,10 +242,23 @@
                 addSlide();
                 showSlidesMenu();
             });
+            //adding layer event handlers
             $("#addLayerBTN").click(function() {
                 addLayer();
                 showLayersMenu();
             });
+            $("#addLayerTitleBTN").click(function (){
+                addLayerTitle();
+                showLayersMenu();
+            });
+            $("#addLayerTextBoxBTN").click(function (){
+                addLayersTextBox();
+                showLayersMenu();
+            });
+
+
+            //other
+
             $("#editSlidesBTN").click(function(){
                 paintSlideIcons();
                 showSlidesMenu();
@@ -196,10 +269,24 @@
             $("#saveAsBTN").click(function(){
                 saveAs();
             });
+            $("#slidesAndLayersBTN").click(function(){
+                changeToSlidesAndLayersMenu();
+            });
+            $("#BackgroundBTN").click(function(){
+                changeToBackgroundMenu();
+            });
+            $("#settingsBTN").click(function(){
+                changeToSettingsMenu();
+            });
+
+
+
 
 
 
             //main line
+            $("#backgroundsMenu").hide();
+            $("#SettingsMenu").hide();
             addSlide();
             showSlidesMenu();
 

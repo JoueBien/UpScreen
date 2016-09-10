@@ -53,6 +53,7 @@
     padding-top: 1.1%;
     cursor: pointer;
     font-size: 166% !important;
+    visibility: hidden;
 }
 
 input[type=checkbox]:checked+.lever {
@@ -91,10 +92,21 @@ nav ul li:hover {
     top: 64px !important;
 }
 
+
+.dropDownSubMenu:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+.dropDownSubMenu {
+    padding-left: 2em;
+    line-height: 27px;
+}
+
 /*dropdown menu color */
 .dropdown-content li>a, .dropdown-content li>span {
     color: #ee6e73 !important;
 }
+
+
 .screenIcon {
     width: calc(196px * 1.5625);
     height: 196px;
@@ -121,9 +133,34 @@ nav ul li:hover {
     width: calc(800px * 1.5625);
     height: 800px;
     background-color: black;
-    margin: 1%
+    margin: 1%;
+    border: 1px red solid;
+}
+body{
+    background-color: gray;
 }
 .noPadding {
     padding: 0em !important;
+}
+label {
+    font-size: 98% !important;
+}
 
+
+input[type=color]{
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    border: solid 1px #f2f2f2;
+    box-shadow: 0px 0px !important;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+input[type=color]:hover {
+    outline: 1px solid #c9f3ef;
+    outline-color: rgb(201, 243, 239);
+    outline-style: solid;
+    outline-width: 1px;
 }

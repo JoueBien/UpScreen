@@ -32,8 +32,8 @@ var defoultNewSLayer = {
     "innerSlideParts" : [],
     "x" : 0,
     "y" : 0,
-    "width" : -1,
-    "height" : -1,
+    "width" : 0,
+    "height" : 0,
     "opacity" : 0,
     "padding" : 0,
     "shape" : "square",
@@ -47,6 +47,69 @@ var defoultNewSLayer = {
     }
 };
 
+//new slide defoult jason
+var defoultLayerTitle = {
+    "text" : {
+        "text" : "Title",
+        "afterText" : "",
+        "textSize" : 517,
+        "textColour" : "black",
+        "textFont" : "",
+        "textAlign" : "center"
+    },
+    "background" : {
+        "type" : "colour",
+        "data" : "white",
+    },
+    "innerSlideParts" : [],
+    "x" : 3,
+    "y" : 5,
+    "width" : 94,
+    "height" : 15,
+    "opacity" : 0,
+    "padding" : 0,
+    "shape" : "square",
+    "borderRadius" : 0,
+
+    "outline" :{
+        "size" : 0,
+        "colour": "black",
+        "style" : "solid",
+
+    }
+};
+
+var defoultLayerTextBox = {
+    "text" : {
+        "text" : "Text Box",
+        "afterText" : "",
+        "textSize" : 337,
+        "textColour" : "black",
+        "textFont" : "",
+        "textAlign" : "left"
+    },
+    "background" : {
+        "type" : "colour",
+        "data" : "white",
+    },
+    "innerSlideParts" : [],
+    "x" : 3,
+    "y" : 25,
+    "width" : 94,
+    "height" : 70,
+    "opacity" : 0,
+    "padding" : 1,
+    "shape" : "square",
+    "borderRadius" : 0,
+
+    "outline" :{
+        "size" : 0,
+        "colour": "black",
+        "style" : "solid",
+
+    }
+};
+//renders the css used in the slide preview
 function generateCSS (sPart,position){
     style=" style='position:"+position+"; ";
     if (sPart.width != -1){
@@ -59,10 +122,13 @@ function generateCSS (sPart,position){
         style+= " color: "+sPart.text.textColour+"; ";
     }
     if (sPart.text.textSize != -1){
-        style += " font-size: "+sPart.text.textSize+"vh;";
+        style += " font-size: "+sPart.text.textSize+"%;";
     }
     if (sPart.padding != -1){
-        style+=" padding: "+sPart.padding+";";
+        style+=" padding: "+sPart.padding+"%;";
+        style+=" padding-left: "+(sPart.padding *2)+"%;";
+        style+=" padding-right: "+(sPart.padding *2)+"%;";
+
     }
     if (sPart.borderRadius != -1){
         style+=" border-radius: "+sPart.borderRadius+"vh;";
@@ -96,6 +162,7 @@ function generateCSS (sPart,position){
     return style;
 }
 
+//triggers the export function
 function saveAs (){
     ipcRenderer.on("fileSystem", (event, arg) => {
         console.log(arg);  // prints "ping"
@@ -104,4 +171,28 @@ function saveAs (){
         "type":"saveAs",
         "data": slides,
     });
+}
+
+
+
+//switch from background to layers/slides side menu to settings side menu
+function changeToBackgroundMenu (){
+    $("#slidesAndLayersMenu").hide();
+    $("#SettingsMenu").hide();
+    document.getElementById("sideMenuTitle").innerHTML = "Background";
+    $("#backgroundsMenu").show();
+}
+function changeToSlidesAndLayersMenu (){
+    $("#backgroundsMenu").hide();
+    $("#SettingsMenu").hide();
+    document.getElementById("sideMenuTitle").innerHTML = "Slides & Layers";
+    $("#slidesAndLayersMenu").show();
+}
+
+function changeToSettingsMenu (){
+    $("#slidesAndLayersMenu").hide();
+    $("#backgroundsMenu").hide();
+    document.getElementById("sideMenuTitle").innerHTML = "Settings";
+    $("#SettingsMenu").show();
+
 }
