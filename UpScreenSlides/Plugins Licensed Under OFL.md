@@ -1,4 +1,5 @@
 The following parts of Up screen were provided and used under the SIL Open Font License (OFL) License:
+
 -Font Awesom
 
 OFL FAQ - Frequently Asked Questions about the SIL Open Font License (OFL)
