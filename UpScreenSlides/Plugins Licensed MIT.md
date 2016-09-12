@@ -2,6 +2,7 @@ The following parts of Up Screen were provided and used under the MIT License:
 -Jqury & hammer
 -materialize css
 -electron
+-electron builder
 
 MIT License
 
@@ -25,7 +26,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-
-The following parts of Up screen were provided and used under the Apache License Version 2.0:
--google Icons 
