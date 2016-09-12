@@ -109,6 +109,12 @@ var defoultLayerTextBox = {
 
     }
 };
+//html secape function
+function stripTags (html){
+        return escape(html);
+
+}
+
 //renders the css used in the slide preview
 function generateCSS (sPart,position){
     style=" style='position:"+position+"; ";
