@@ -1,12 +1,22 @@
 //includes
-const electron = require('electron');
-const  dialog = electron.dialog;
-const fs = require('fs');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
-const {ipcMain} = require('electron')
+var electron = require('electron');
+var  dialog = electron.dialog;
+var fs = require('fs');
+var app = electron.app;
+var BrowserWindow = electron.BrowserWindow;
+var {ipcMain} = require('electron');
+
 //vars
 let mainWindow;
+global.appVars = require('./js Node/firstTimeMainLine.js');
+
+//main line
+console.log(global.appVars);
+
+
+
+
+
 
 function createWindow () {
     mainWindow = new BrowserWindow({width: 1920, height: 1080});//create browser window
