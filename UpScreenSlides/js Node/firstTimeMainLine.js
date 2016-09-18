@@ -2,8 +2,8 @@
 var electron = require('electron');
 var fs = require('fs');
 var app = electron.app;
-const dataTemplates = require('./DataStructures.js');
-
+global.dataTemplates = require('./DataStructures.js').data;
+//console.log(dataTemplates);
 //generate folders
 folders = app.getPath('userData');
 fileStorage = folders.replace("Up-Screen-Slides", "UpScreen");   //change app folder to a shared one
@@ -21,48 +21,51 @@ exports.templateSlides = templateSlides;
 exports.media = media;
 exports.mediaVideos = mediaVideos;
 exports.mediaImages = mediaImages;
-exports.dataTemplates = dataTemplates;
+
 //add to global to assists saving
+//not found then create
 
-//creat folders if they don't exits
-fs.exists(fileStorage, function(exists) {
-    if (!exists) {
-        fs.mkdir(fileStorage);
-        fs.mkdir(templates, function (err) {
-            if (!err) {
-                fs.mkdir(templateSlides);
-                fs.mkdir(templateSlideLayer);
-            }
-        });
-        fs.mkdir(media, function (err) {
-            if (!err) {
-                fs.mkdir(mediaVideos);
-                fs.mkdir(mediaImages);
-                //write templates to file
-                //slides
-                fs.writeFile(templateSlides+"/Defoult New Slide.pts", JSON.stringify(dataTemplates.defoultNewSlide), function (err) {
-                    if(err){ console.log("An error ocurred creating the file "+ err.message); }
-                    console.log("The file has been succesfully saved");
-                });
-                //layers
-                fs.writeFile(templateSlideLayer+"/Defoult New Layer.ptl", JSON.stringify(dataTemplates.defoultNewLayer), function (err) {
-                    if(err){ console.log("An error ocurred creating the file "+ err.message); }
-                    console.log("The file has been succesfully saved");
-                });
-                fs.writeFile(templateSlideLayer+"/Defoult Layer Title.ptl", JSON.stringify(dataTemplates.defoultLayerTitle), function (err) {
-                    if(err){ console.log("An error ocurred creating the file "+ err.message); }
-                    console.log("The file has been succesfully saved");
-                });
-                fs.writeFile(templateSlideLayer+"/Defoult Layer TextBox.ptl", JSON.stringify(dataTemplates.defoultLayerTextBox), function (err) {
-                    if(err){ console.log("An error ocurred creating the file "+ err.message); }
-                    console.log("The file has been succesfully saved");
-                });
-
-            }
-        });
-
-
-
-
-    }
-});
+if (!fs.existsSync(fileStorage)){
+    fs.mkdirSync(fileStorage);
+        fs.mkdirSync(templates);
+            fs.mkdirSync(templateSlideLayer);
+                //global.dataTemplates.SlidesNames[0]
+                fs.writeFileSync(templateSlideLayer+"/"+global.dataTemplates.LayersNames[0],JSON.stringify(global.dataTemplates.LayersData[0]));
+                fs.writeFileSync(templateSlideLayer+"/"+global.dataTemplates.LayersNames[1],JSON.stringify(global.dataTemplates.LayersData[1]));
+                fs.writeFileSync(templateSlideLayer+"/"+global.dataTemplates.LayersNames[2],JSON.stringify(global.dataTemplates.LayersData[2]));
+            fs.mkdirSync(templateSlides);
+            fs.writeFileSync(templateSlides+"/"+global.dataTemplates.SlidesNames[0],JSON.stringify(global.dataTemplates.SlidesData[0]));
+        fs.mkdirSync(media);
+            fs.mkdirSync(mediaVideos);
+            fs.mkdirSync(mediaImages);
+}
+//load in from file
+    //resset jason
+    global.dataTemplates = {
+        "LayersNames": [],
+        "LayersData":[],
+        "SlidesNames":[],
+        "SlidesData":[],
+    };
+    //get list of layer templates
+    templatesFileList = fs.readdirSync(templateSlideLayer+"/");
+    templatesFileList.forEach(function (fileName) {
+        //console.log(fileName);
+        data = fs.readFileSync(templateSlideLayer+"/"+fileName,"utf8");
+        jData = JSON.parse(data);
+        global.dataTemplates.LayersNames.push(fileName);
+        global.dataTemplates.LayersData.push(jData);
+        //console.log(jData);
+    });
+    //get list of slide templates
+    templatesFileList = fs.readdirSync(templateSlides+"/");
+    templatesFileList.forEach(function (fileName) {
+        //console.log(fileName);
+        data = fs.readFileSync(templateSlides+"/"+fileName,"utf8");
+        jData = JSON.parse(data);
+        global.dataTemplates.SlidesNames.push(fileName);
+        global.dataTemplates.SlidesData.push(jData);
+        //console.log(jData);
+    });
+//return templates to caller file
+exports.templatesData = global.dataTemplates;

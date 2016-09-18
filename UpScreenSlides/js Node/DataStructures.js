@@ -1,18 +1,30 @@
-exports.defoultNewSlide = {
+templatesForExport = {
+    "LayersNames": [],
+    "LayersData":[],
+    "SlidesNames":[],
+    "SlidesData":[],
+}
+
+templatesForExport.SlidesNames.push("Defoult New Slide.pts");
+
+templatesForExport.SlidesData.push(
+    {
     "background" : {
         "type" : "color",
         "data" : "black"
-    },
+        },
     "slide" : {
         "number" : 0,
         "displayName" : "demoSlide",
         "displayNumber" : 0,
         "notes" : "no notes",
-    },
+        },
     "innerSlideParts": [],
-};
-
-exports.defoultNewLayer = {
+    }
+);
+templatesForExport.LayersNames.push("Defoult New Layer.ptl");
+templatesForExport.LayersData.push(
+    {
     "text" : {
         "text" : "",
         "afterText" : "",
@@ -20,11 +32,11 @@ exports.defoultNewLayer = {
         "textColour" : "black",
         "textFont" : "",
         "textAlign" : "left"
-    },
+        },
     "background" : {
         "type" : "colour",
         "data" : "white",
-    },
+        },
     "innerSlideParts" : [],
     "x" : 0,
     "y" : 0,
@@ -40,11 +52,14 @@ exports.defoultNewLayer = {
         "colour": "black",
         "style" : "solid",
 
+        }
     }
-};
+);
 
 //new slide defoult jason
-exports.defoultLayerTitle = {
+templatesForExport.LayersNames.push("Defoult Layer Title.ptl");
+templatesForExport.LayersData.push(
+    {
     "text" : {
         "text" : "Title",
         "afterText" : "",
@@ -52,11 +67,11 @@ exports.defoultLayerTitle = {
         "textColour" : "black",
         "textFont" : "",
         "textAlign" : "center"
-    },
+        },
     "background" : {
         "type" : "colour",
         "data" : "white",
-    },
+        },
     "innerSlideParts" : [],
     "x" : 3,
     "y" : 5,
@@ -72,10 +87,14 @@ exports.defoultLayerTitle = {
         "colour": "black",
         "style" : "solid",
 
+        }
     }
-};
+);
 
-exports.defoultLayerTextBox = {
+
+templatesForExport.LayersNames.push("Defoult Layer TextBox.ptl");
+templatesForExport.LayersData.push(
+{
     "text" : {
         "text" : "Text Box",
         "afterText" : "",
@@ -83,11 +102,11 @@ exports.defoultLayerTextBox = {
         "textColour" : "black",
         "textFont" : "",
         "textAlign" : "left"
-    },
+        },
     "background" : {
         "type" : "colour",
         "data" : "white",
-    },
+        },
     "innerSlideParts" : [],
     "x" : 3,
     "y" : 25,
@@ -102,6 +121,7 @@ exports.defoultLayerTextBox = {
         "size" : 0,
         "colour": "black",
         "style" : "solid",
-
+        }
     }
-};
+);
+exports.data = templatesForExport;
