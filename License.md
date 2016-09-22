@@ -1,267 +1,40 @@
-# Licence
 
-THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS 
-PUBLIC LICENCE ("LICENCE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE 
-LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORISED UNDER THIS LICENCE OR COPYRIGHT 
-LAW IS PROHIBITED.
 
-BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND 
-BY THE TERMS OF THIS LICENCE. THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN 
-CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+## **Up Screen - Terms and conditions**
 
-## 1. Definitions
+1. **Preamble:** This Agreement, signed on Sep 22, 2016 (hereinafter: Effective Date) governs the relationship between Licensee, a Business Entity, (hereinafter: Licensee) and Joue Bien Tech, a private person whose principal place of business is Gold Coast (hereinafter: Licensor). This Agreement sets the terms, rights, restrictions and obligations on using Up Screen (hereinafter: The Software) created and owned by Licensor, as detailed herein
+2. **License Grant:** Licensor hereby grants Licensee a Personal, Non-assignable &amp; non-transferable, Pepetual, Non-commercial, Including the rights to create but not distribute derivative works, Non-exclusive license, all with accordance with the terms set forth and other legal restrictions set forth in 3rd party software used while running Software.
+  1. **Limited:** Licensee may use Software for the purpose of:
+    1. Running Software on Licensee&#39;s Website[s] and Server[s];
+    2. Allowing 3rd Parties to run Software on Licensee&#39;s Website[s] and Server[s];
+    3. Publishing Software&#39;s output to Licensee and 3rd Parties;
+    4. Distribute verbatim copies of Software&#39;s output (including compiled binaries);
+    5. Modify Software to suit Licensee&#39;s needs and specifications.
+  2. This license is granted perpetually, as long as you do not materially breach it.
+  3. **Binary Restricted:** Licensee may sublicense Software as a part of a larger work containing more than Software, distributed solely in Object or Binary form under a personal, non-sublicensable, limited license. Such redistribution shall be limited to unlimited codebases.
+  4. **Non Assignable &amp; Non-Transferable:** Licensee may not assign or transfer his rights and duties under this license.
+  5. **Non-Commercial:** Licensee may not use Software for commercial purposes. for the purpose of this license, commercial purposes means that a 3rd party has to pay in order to access Software or that the Website that runs Software is behind a paywall.
+  6. **Including the Right to Create Derivative Works:** Licensee may create derivative works based on Software, including amending Software&#39;s source code, modifying it, integrating it into a larger work or removing portions of Software, as long as no distribution of the derivative works is made
+3. **Term &amp; Termination:** The Term of this license shall be until terminated. Licensor may terminate this Agreement, including Licensee&#39;s license in the case where Licensee :
+  1. became insolvent or otherwise entered into any liquidation process; or
+  2. exported The Software to any jurisdiction where licensor may not enforce his rights under this agreements in; or
+  3. Licensee was in breach of any of this license&#39;s terms and conditions and such breach was not cured, immediately upon notification; or
+  4. Licensee in breach of any of the terms of clause 2 to this license; or
+  5. Licensee otherwise entered into any arrangement which caused Licensor to be unable to enforce his rights under this License.
+4. **Payment:** In consideration of the License granted under clause 2, Licensee shall pay Licensor a fee, via Credit-Card, PayPal or any other mean which Licensor may deem adequate. Failure to perform payment shall construe as material breach of this Agreement.
+5. **Upgrades, Updates and Fixes:** Licensor may provide Licensee, from time to time, with Upgrades, Updates or Fixes, as detailed herein and according to his sole discretion. Licensee hereby warrants to keep The Software up-to-date and install all relevant updates and fixes, and may, at his sole discretion, purchase upgrades, according to the rates set by Licensor. Licensor shall provide any update or Fix free of charge; however, nothing in this Agreement shall require Licensor to provide Updates or Fixes.
+  1. **Upgrades:** for the purpose of this license, an Upgrade shall be a material amendment in The Software, which contains new features and or major performance improvements and shall be marked as a new version number. For example, should Licensee purchase The Software under version 1.X.X, an upgrade shall commence under number 2.0.0.
+  2. **Updates:** for the purpose of this license, an update shall be a minor amendment in The Software, which may contain new features or minor improvements and shall be marked as a new sub-version number. For example, should Licensee purchase The Software under version 1.1.X, an upgrade shall commence under number 1.2.0.
+  3. **Fix:** for the purpose of this license, a fix shall be a minor amendment in The Software, intended to remove bugs or alter minor features which impair the The Software&#39;s functionality. A fix shall be marked as a new sub-sub-version number. For example, should Licensee purchase Software under version 1.1.1, an upgrade shall commence under number 1.1.2.
+6. **Support:** Software is provided under an AS-IS basis and without any support, updates or maintenance. Nothing in this Agreement shall require Licensor to provide Licensee with support or fixes to any bug, failure, mis-performance or other defect in The Software.
+  1. **Bug Notification:** Licensee may provide Licensor of details regarding any bug, defect or failure in The Software promptly and with no delay from such event; Licensee shall comply with Licensor&#39;s request for information regarding bugs, defects or failures and furnish him with information, screenshots and try to reproduce such bugs, defects or failures.
+  2. **Feature Request:** Licensee may request additional features in Software, provided, however, that (i) Licensee shall waive any claim or right in such feature should feature be developed by Licensor; (ii) Licensee shall be prohibited from developing the feature, or disclose such feature request, or feature, to any 3rd party directly competing with Licensor or any 3rd party which may be, following the development of such feature, in direct competition with Licensor; (iii) Licensee warrants that feature does not infringe any 3rd party patent, trademark, trade-secret or any other intellectual property right; and (iv) Licensee developed, envisioned or created the feature solely by himself.
+7. **Liability:**  To the extent permitted under Law, The Software is provided under an AS-IS basis. Licensor shall never, and without any limit, be liable for any damage, cost, expense or any other payment incurred by Licensee as a result of Software&#39;s actions, failure, bugs and/or any other interaction between The Software  and Licensee&#39;s end-equipment, computers, other software or any 3rd party, end-equipment, computer or services.  Moreover, Licensor shall never be liable for any defect in source code written by Licensee when relying on The Software or using The Software&#39;s source code.
+8. **Warranty:  **
+  1. **Intellectual Property:** Licensor hereby warrants that The Software does not violate or infringe any 3rd party claims in regards to intellectual property, patents and/or trademarks and that to the best of its knowledge no legal action has been taken against it for any infringement or violation of any 3rd party intellectual property rights.
+  2. **No-Warranty:** The Software is provided without any warranty; Licensor hereby disclaims any warranty that The Software shall be error free, without defects or code which may cause damage to Licensee&#39;s computers or to Licensee, and that Software shall be functional. Licensee shall be solely liable to any damage, defect or loss incurred as a result of operating software and undertake the risks contained in running The Software on License&#39;s Server[s] and Website[s].
+  3. **Prior Inspection:** Licensee hereby states that he inspected The Software thoroughly and found it satisfactory and adequate to his needs, that it does not interfere with his regular operation and that it does meet the standards and scope of his computer systems and architecture. Licensee found that The Software interacts with his development, website and server environment and that it does not infringe any of End User License Agreement of any software Licensee may use in performing his services. Licensee hereby waives any claims regarding The Software&#39;s incompatibility, performance, results and features, and warrants that he inspected the The Software.
+9. **No Refunds:** Licensee warrants that he inspected The Software according to clause 7(c) and that it is adequate to his needs. Accordingly, as The Software is intangible goods, Licensee shall not be, ever, entitled to any refund, rebate, compensation or restitution for any reason whatsoever, even if The Software contains material flaws.
+10. **Indemnification:** Licensee hereby warrants to hold Licensor harmless and indemnify Licensor for any lawsuit brought against it in regards to Licensee&#39;s use of The Software in means that violate, breach or otherwise circumvent this license, Licensor&#39;s intellectual property rights or Licensor&#39;s title in The Software. Licensor shall promptly notify Licensee in case of such legal action and request Licensee&#39;s consent prior to any settlement in relation to such lawsuit or claim.
+11. **Governing Law, Jurisdiction:** Licensee hereby agrees not to initiate class-action lawsuits against Licensor in relation to this license and to compensate Licensor for any legal fees, cost or attorney fees should any claim brought by Licensee against Licensor be denied, in part or in full.
 
-### "Collection"
-  means the Work in its entirety in unmodified form along with one or more other 
-  separate and independent works, assembled into a collective whole. A Collection may, for example, 
-  include a periodical, encyclopedia or anthology. A Collection will not be considered a Derivative 
-  Work for the purposes of this Licence.
-
-### "Commercial" 
-  means primarily intended for or directed towards commercial advantage or private 
-  monetary compensation. The exchange of the Work for other copyright works by means of digital 
-  file-sharing or otherwise shall not be considered to be Commercial, provided there is no payment of 
-  any monetary compensation in connection with the exchange of copyright works.
-###"Derivative Work"
-  means material in any form that is created by editing, modifying or adapting 
-  the Work, a substantial part of the Work, or the Work and other pre-existing works. Derivative 
-  Works may, for example, include a translation, adaptation, musical arrangement, dramatisation, 
-  motion picture version, sound recording, art reproduction, abridgment, condensation, or any other 
-  form in which the Work may be transformed or adapted, except that a Collection will not be 
-  considered a Derivative Work for the purpose of this Licence. For the avoidance of doubt, where the 
-  Work is a musical composition or sound recording, the synchronization of the Work in timed-relation 
-  with a moving image ("synching") will be considered a Derivative Work for the purpose of this 
-  Licence.
-### "Distribute"
-means to make available to the public by any means, including publication, electronic 
-communication, or broadcast.
-### "Licence Elements"
-means the following high-level licence attributes indicated in the title of this 
-Licence: Attribution, NonCommercial, ShareAlike.
-### "Licensor"
-means the individual, individuals, entity or entities that offer(s) the Work under the 
-terms of this Licence.
-###"Original Author"
-means the individual, individuals, entity or entities who created the Work.
-### "Reproduce"
-means to make a copy of the Work in any material form (eg storage in digital form).
-### "Work"
-means the material (including any work or other subject matter) protected by copyright 
-which is offered under the terms of this Licence. This may include (without limitation) a literary, 
-dramatic, musical or artistic work; a sound recording or cinematograph film; a published edition of a 
-literary, dramatic, musical or artistic work; or a television or sound broadcast.
-### "You"
-means an individual or entity exercising rights under this Licence who has not previously 
-violated the terms of this Licence with respect to the Work, or who has received express permission 
-from the Licensor to exercise rights under this Licence despite a previous violation.
-
-#2. Fair Dealing and Other Rights
-
-Nothing in this Licence is intended to reduce, limit, or restrict any uses free from copyright or rights 
-arising from limitations or exceptions under copyright law or any other applicable laws.
-
-##3. Licence Grant
-
-###3A Grant of Rights
-
-Provided that the terms set out in this Licence are satisfied, the Licensor grants to You a worldwide, 
-royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) licence to 
-exercise the following rights:
-
-    Reproduce the Work;
-    incorporate the Work into one or more Collections;
-    Reproduce the Work as incorporated in any Collection;
-    create and Reproduce one or more Derivative Works; and
-    Distribute and publicly perform the Work, a Derivative Work or the Work as incorporated in any 
-    Collection.
-
-###3B Media and Formats
-
-The above rights may be exercised in any media or format whether now known or hereafter created. 
-They include the right to make modifications that are technically necessary to exercise the rights in 
-other media and formats.
-
-###3C Other Rights Reserved
-
-All rights not expressly granted by the Licensor are reserved. This includes the right to collect 
-royalties, whether individually or via a licensing body such as a collecting society, for any Commercial 
-use of the Work. The Licensor waives the right to collect royalties for any exercise by You of the 
-rights granted under this Licence.
-
-##4. Restrictions
-
-The licence granted above is limited by the following restrictions.
-
-###4A Restrictions on Distribution and Public Performance of the Work
-  You may Distribute and publicly perform the Work only under the terms of this Licence.
-  You must include a copy of, or the Uniform Resource Identifier (such as a web link) for, this 
-  Licence with every copy of the Work You Distribute or publicly perform.
-  You must not offer or impose any terms on the Work that restrict this Licence or the ability of a 
-    recipient of the Work from You to exercise the rights granted to them by this Licence.
-  You are not granted the right to sublicense the Work. The rights of recipients of the Work from 
-  You are governed by clause 9.
-  You must keep intact all notices that refer to this Licence and to the disclaimer of warranties with 
-    every copy of the Work You Distribute or publicly perform.
-  When You Distribute or publicly perform the Work, You must not impose any technological 
-    measures on it that restrict the ability of a recipient of the Work from You to exercise the rights 
-    granted to them by this Licence.
-  For the avoidance of doubt, while this clause 4A applies to the Work as incorporated into a 
-  Collection, it does not require other material within the Collection, or the Collection apart from the 
-    Work itself, to be made subject to this Licence.
-
-### 4B Restrictions on Distribution and Public Performance of Derivative Works
-  You may only Distribute or publicly perform a Derivative Work if you apply one of the following 
-  licences to it:
-      this Licence;
-      a later version of this Licence with the same Licence Elements (such as Attribution-
-    NonCommercial-ShareAlike 4.0 Australia); or
-      a Creative Commons Unported licence or a licence from another jurisdiction (either this or a 
-      later version) that has the same Licence Elements (such as Attribution-NonCommercial-ShareAlike 
-      3.0 Netherlands).
-    In this clause 4B, whichever of the above licences You choose to apply to a Derivative Work is the 
-      "Applicable Licence".
-    You must include a copy of, or the Uniform Resource Identifier (such as a web link) for, the 
-    Applicable Licence with every copy of the Derivative Work You Distribute or publicly perform.
-    You must not impose any terms on the Derivative Work that restrict the Applicable Licence, or the 
-      ability of a recipient of the Derivative Work from You to exercise the rights granted to them by that 
-      licence.
-    You must keep intact all notices that refer to this Licence and to the disclaimer of warranties with 
-      every copy of the Work as included in the Derivative Work that You Distribute or publicly perform.
-    When You Distribute or publicly perform a Derivative Work You must not impose any 
-      technological measures on it that restrict the ability of a recipient of the Derivative Work from You 
-      to exercise the rights granted to them by the Applicable Licence.
-    For the avoidance of doubt, while this clause 4B applies to any Derivative Work as incorporated 
-      into a Collection, it does not require other material within the Collection, or the Collection as a 
-      whole, to be made subject to the terms of the Applicable Licence.
-
-### 4C Restrictions on Commercial Use
-  You may not exercise any of the rights granted to You by clause 3 above in any Commercial manner.
-
-### 4D Attribution and Notice Requirements
-
-  When You Distribute or publicly perform the Work or any Derivative Work or Collection You must 
-    keep intact all copyright notices for the Work.
-  When You Distribute or publicly perform the Work or any Derivative Work or Collection You must 
-    provide, in a manner reasonable to the medium or means You are using:
-    the name or pseudonym (if provided) of the Original Author and/or of any other party (such as a 
-    sponsor institute, publishing entity or journal) that the Original Author or Licensor has requested be 
-    attributed (such as in the copyright notice or terms of use). In this clause 4D these parties are 
-    referred to as "Attribution Parties";
-        the title of the Work (if provided); and
-        to the extent reasonably practicable, any Uniform Resource Identifier (such as a web link) that 
-    the Licensor specifies should be associated with the Work that refers to the copyright notice or 
-    licensing information for the Work.
-  For any Derivative Work You Distribute or publicly perform, You must take reasonable steps to 
-    clearly identify that changes were made to the Work. For example, a translation could be marked 
-    "The original work was translated from English to Spanish".
-  In the case of a Derivative Work or Collection, the above attribution should, at a minimum, appear 
-    as part of any credits for other contributing authors and be as prominent as the credits for those 
-    other authors.
-  You must, to the extent practicable, remove the above attribution from any Collection or 
-    Derivative Work if requested to do so by the Licensor or Original Author.
-  For the avoidance of doubt, You may only use the credit required by this clause 4D for the purpose 
-    of attribution in the manner set out above. By exercising Your rights under this Licence, You must 
-    not assert or imply:
-        any connection between the Original Author, Licensor or any other Attribution Party and You or 
-    Your use of the Work; or
-        sponsorship or endorsement by the Original Author, Licensor or any other Attribution Party of 
-    You or Your use of the Work,
-    without their separate, express prior written permission.
-
-### 4E Moral Rights
-
-    Moral rights remain unaffected to the extent they are recognised and nonwaivable at law. In this 
-    clause 4E, "moral rights" means the personal rights granted by law to the Original Author of a 
-    copyright work. For example, Part IX of the Copyright Act 1968 (Cth) grants authors the right of 
-    integrity of authorship, the right of attribution of authorship, and the right not to have authorship 
-    falsely attributed.
-
-## 5. Representations, Warranties and Disclaimer
-    Except as expressly stated in this Licence or otherwise agreed to by the parties in writing, and to 
-    the full extent permitted by applicable law, the Licensor offers the Work "as-is" and makes no 
-    representations, warranties or conditions of any kind concerning the Work, express, implied, 
-    statutory or otherwise. This includes, without limitation, any representations, warranties or 
-    conditions regarding:
-            the contents or accuracy of the Work;
-            title, merchantability, or fitness for a particular purpose;
-            non-infringement;
-            the absence of latent or other defects; or
-            the presence or absence of errors, whether or not discoverable.
-        The Trade Practices Act 1974 (Cth), and the corresponding State and Territory fair trading 
-    legislation, imply certain warranties and conditions in certain circumstances, such as the right to 
-    supply or fitness for purpose of goods or services supplied to a consumer. Clause 5(a) cannot and is 
-    not intended to exclude, restrict or modify these warranties.
-
-## 6. Limit of Liability
-
-    To the full extent permitted by applicable law, and except for any liability arising from contrary 
-    agreement, in no event will the Licensor be liable to You on any legal basis (including without 
-    limitation, negligence) for any loss or damage whatsoever, including (without limitation):
-            loss of production or operation time, loss, damage or corruption of data or records; or
-            loss of anticipated savings, opportunity, revenue, profit or goodwill, or other economic loss; or
-            any special, incidental, consequential, punitive or exemplary damages arising out of or in 
-    connection with this Licence or the use of the Work, even if the Licensor has been advised of the 
-    possibility of such damages.
-    If applicable legislation implies warranties or conditions, or imposes obligations or liability on the 
-    Licensor in respect of this Licence that cannot be wholly or partly excluded, restricted or modified, 
-    the Licensor’s liability is limited, to the full extent permitted by the applicable legislation, at its 
-    option, to:
-            in the case of goods, any one or more of the following:
-                the replacement of the goods or the supply of equivalent goods;
-                the repair of the goods;
-                the payment of the cost of replacing the goods or of acquiring equivalent goods;
-                the payment of the cost of having the goods repaired; or
-            in the case of services:
-                the supplying of the services again; or
-                the payment of the cost of having the services supplied again.
-        The Trade Practices Act 1974 (Cth), and the corresponding State and Territory fair trading 
-    legislation, restrict the limitation of liability in certain circumstances, such as a contract for the 
-    supply of goods or services of a kind ordinarily acquired for personal, domestic, or household use. 
-    Clauses 6(a) and 6(b) cannot and are not intended to apply in circumstances where it is prohibited by 
-    law.
-
-## 7. Termination
-    This Licence and the rights granted to You under this Licence shall terminate automatically upon any 
-    breach by You of the terms of the Licence. Individuals or entities who have received a Derivative 
-    Work or a Collection from You pursuant to this Licence, however, will not have their licences 
-    terminated provided they remain in full compliance with those licences. Clauses 1, 2, 5, 6, 7, 8, 9, 10, 
-    11, 12 and 13 shall survive any termination of this Licence.
-
-## 8. Licensor’s Rights Retained
-    Subject to the above terms, the Licence granted here is perpetual (for the duration of the applicable 
-    copyright in the Work). Notwithstanding this, the Licensor reserves the right to release the Work 
-    under different licence terms or to stop distributing the Work at any time. However, any such 
-    release will not serve to withdraw this Licence (or any other licence that has been granted under the 
-    terms of this Licence), and this Licence will continue in full force and effect unless terminated as 
-    stated above.
-
-## 9. Licence Grant to Recipients of the Work from You
-
-    Each time You Distribute or publicly perform the Work, a Derivative Work or a Collection the 
-    Licensor offers the recipient a licence to the Work on the same terms as are granted to You under 
-    this Licence.
-
-## 10. Severability
-
-    If any provision of this Licence is invalid or unenforceable under applicable law, it shall not affect the 
-    validity or enforceability of the remainder of the terms of this Licence. Without further action by the 
-    parties to this agreement, such provision shall be reformed to the minimum extent necessary to 
-    make such provision valid and enforceable.
-
-## 11. Waivers and Consents
-
-    No term of this Licence shall be deemed waived and no breach consented to unless such waiver or 
-    consent is in writing and signed by the relevant party.
-
-## 12. Entire Agreement
-
-    This Licence constitutes the entire agreement between the parties. To the full extent permitted by 
-    law, there are no understandings, agreements or representations with respect to the Work not 
-    specified here. The Licensor shall not be bound by any additional provisions that may appear in any 
-    communication from You. This Licence may not be modified without the written agreement of the 
-    Licensor and You.
-
-## 13. Governing Law
-
-    The construction, validity and performance of this Licence shall be governed by the laws in force in 
-    the Australian Capital Territory, Australia.
