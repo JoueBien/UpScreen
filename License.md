@@ -1,6 +1,6 @@
 
 
-## **Up Screen - Terms and conditions**
+## **Up Screen - License**
 
 1. **Preamble:** This Agreement, signed on Sep 22, 2016 (hereinafter: Effective Date) governs the relationship between Licensee, a Business Entity, (hereinafter: Licensee) and Joue Bien Tech, a private person whose principal place of business is Gold Coast (hereinafter: Licensor). This Agreement sets the terms, rights, restrictions and obligations on using Up Screen (hereinafter: The Software) created and owned by Licensor, as detailed herein
 2. **License Grant:** Licensor hereby grants Licensee a Personal, Non-assignable &amp; non-transferable, Pepetual, Non-commercial, Including the rights to create but not distribute derivative works, Non-exclusive license, all with accordance with the terms set forth and other legal restrictions set forth in 3rd party software used while running Software.
